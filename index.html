@@ -63,7 +63,7 @@
             <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">About the Dev</a> | <a href="othergames.html">Other Games</a>
         </nav>
         <article style="display: inline-flexbox">
-            <canvas  oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none">
+            <canvas  oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none" id="Canvas">
             </canvas>
             <input style="display: none;" type="file" onchange="LoadFile()" id="fileloader">
         <button id="button" style="display: none;"></button>
