@@ -421,8 +421,11 @@
                 }
                 run(isRain,time,src,lowHealth){
                     //convert mouse from local to global
-                    game.GlobalCurX=((curX-Canvas.width/2)/25-this.midX/50)+this.x
-                    game.GlobalCurY=((curY-Canvas.height/2)/25-this.midY/50)+this.y
+                    function coordinate(event) {
+                var rect = event.target.getBoundingClientRect();
+                curX = event.clientX - rect.left; //x position within the element.
+                curY = event.clientY - rect.top;  //y position within the element.
+            }
 
                     //clear the screen
                     this.ctx.clearRect(0,0,Canvas.width,Canvas.height)
