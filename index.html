@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prison Crafter</title>
+        <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+	    </script>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+        <style>
+            header {
+                text-align: center;
+                text-shadow: 1px 1px 2px black, 0 0 25px red, 5px 6px 5px purple;
+                color: white;
+                height: 50px;
+            }
+            html {
+                background-image: linear-gradient( #232477, #3F41FF);
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+            canvas {
+                width: 500px;
+                height: 500px;
+                background-color: white;
+                border: 3px ridge #300202;
+                float: left;
+            }
+            nav {
+                text-align: center;
+                font-size: 15pt;
+                font-family: Tiny5;
+                color: #FF7400;
+            }
+            a:hover {
+                background-color: #A215C1;
+            }
+            a {
+                color: #FF7400;
+                text-decoration: none;
+            }
+            img {
+                width: 500px;
+                height: 500px;
+                float: right;
+                border: 3px ridge #300202;
+            }
+            footer{
+                text-align: center;
+                padding-top: 81vh;
+                font-size: 8pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Prison Crafter</h1>
+        </header>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">About the Dev</a> | <a href="othergames.html">Other Games</a>
+        </nav>
+        <article style="display: inline-flexbox">
+            <canvas  oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none">
+            </canvas>
+            <input style="display: none;" type="file" onchange="LoadFile()" id="fileloader">
+        <button id="button" style="display: none;"></button>
+        <div style="display:none;">
+            <img id="air" src="GameArt/air3.png">
+            <img id="dirt" src="GameArt/dirt.png">
+            <img id="stone" src="GameArt/stone.png">
+            <img id="deepstone" src="GameArt/deepstone.png">
+            <img id="obsidian" src="GameArt/obsidian2.png">
+            <img id="void" src="GameArt/voidsteel.png">
+            <img id="bunker" src="GameArt/bunker.png">
+            <img id="wire" src="GameArt/wireoff.png">
+            <img id="wire-on" src="GameArt/wireon.png">
+            <img id="core" src="GameArt/core.png">
+            <img id="light" src="GameArt/lighton.png">
+            <img id="light-off" src="GameArt/lightoff.png">
+            <img id="rep-on" src="GameArt/repeateron.png">
+            <img id="rep-off" src="GameArt/repeateroff.png">
+            <img id="inv-on" src="GameArt/inverteron.png">
+            <img id="inv-off" src="GameArt/inverteroff.png">
+            <img id="miniban" src="GameArt/miniban.png">
+            <img id="minibanoff" src="GameArt/minibanoff.png">
+            <img id="end" src="GameArt/end.png">
+            <img id="end-off" src="GameArt/endoff.png">
+            <img id="piston" src="GameArt/piston.png">
+            <img id="puller" src="GameArt/puller.png">
+            <img id="stonegen" src="GameArt/stonegen.png">
+            <img id="deepgen" src="GameArt/deepgen.png">
+            <img id="spikes" src="GameArt/spikes.png">
+            <img id="respawn" src="GameArt/respawn.png">
+            <img id="respawnact" src="GameArt/respawnact.png">
+            <img id="water" src="GameArt/water3.png">
+            <img id="blockdetect" src="GameArt/blockdetect.png">
+            <img id="blockdetecton" src="GameArt/blockdetecton.png">
+            <img id="killzone" src="GameArt/killzoneon.png">
+            <img id="killzone-off" src="GameArt/killzoneoff.png">
+            <img id="pearltrap" src="GameArt/pearltrap.png">
+            <img id="pearltrapon" src="GameArt/pearltrapon.png">
+            <img id="switch" src="GameArt/switch.png">
+            <img id="switchon" src="GameArt/switchon.png">
+            <img id="playerdetect" src="GameArt/playerdetect.png">
+            <img id="playerdetecton" src="GameArt/playerdetecton.png">
+
+            <img id="damage1" src="GameArt/damage1.png">
+            <img id="damage2" src="GameArt/damage2.png">
+            <img id="damage3" src="GameArt/damage3.png">
+            <img id="damage4" src="GameArt/damage4.png">
+            <img id="damage5" src="GameArt/damage5.png">
+        </div>
+            <img src="brent.jpg" title="Brent the silly-goose">
+            <footer>
+                <a href="mailto: darkorangefire@gmail.com ?subject= Website Inquiry" target="_blank">&#169Dark Orange Websites
+            </footer>
+        </article>
+        <script src="myjs.js">
+        </script>
+    </body>
+</html>
