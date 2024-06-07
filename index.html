@@ -23,8 +23,6 @@
                 width: 100%;
             }
             canvas {
-                width: 500px;
-                height: 500px;
                 background-color: white;
                 border: 3px ridge #300202;
                 float: left;
@@ -62,9 +60,9 @@
         <nav>
             <a href="#">About the Dev</a> | <a href="othergames.html">Other Games</a>
         </nav>
-            <canvas  oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none" id="Canvas">
-            </canvas>
-            <input style="display: none;" type="file" onchange="LoadFile()" id="fileloader">
+           <canvas oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none" id="Canvas" width="500" height="500"></canvas>
+        <br><br>
+        <input style="display: none;" type="file" onchange="LoadFile()" id="fileloader">
         <button id="button" style="display: none;"></button>
         <div style="display:none;">
             <img id="air" src="GameArt/air3.png">
@@ -112,7 +110,6 @@
             <img id="damage4" src="GameArt/damage4.png">
             <img id="damage5" src="GameArt/damage5.png">
         </div>
-            <textarea></textarea>
         <script src="myjs.js">
         </script>
     </body>
