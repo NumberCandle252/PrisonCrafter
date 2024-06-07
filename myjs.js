@@ -2066,6 +2066,3 @@
         }catch(e){
             alert("Start Error: "+e)
         }
-        </script>
-    </body>
-</html>
