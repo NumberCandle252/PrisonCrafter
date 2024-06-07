@@ -61,9 +61,10 @@
             <a href="#">About the Dev</a> | <a href="othergames.html">Other Games</a>
         </nav>
 	<article style="display: inline-flex-box">
-           <canvas oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none" id="Canvas" width="500" height="500"></canvas>
-        <br><br>
-        <input style="display: none;" type="file" onchange="LoadFile()" id="fileloader">
+           <canvas oncontextmenu="return false;" onmousemove="coordinate(event)" onmousedown="Click(event)" onmouseup="clicked=false;Rclicked=false;if(game.edit){game.calculateCost()}" style="cursor:none" id="Canvas" width="500" height="500">
+	   </canvas>
+        <input style="display: none; margin: auto;" type="file" onchange="LoadFile()" id="fileloader">
+	</input>
         <button id="button" style="display: none;"></button>
         <div style="display:none;">
             <img id="air" src="GameArt/air3.png">
