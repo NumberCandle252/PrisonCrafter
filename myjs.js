@@ -1,4 +1,4 @@
-        try{
+try{
             var damageImg=[document.getElementById("damage1"),document.getElementById("damage2"),document.getElementById("damage3"),document.getElementById("damage4"),document.getElementById("damage5")]
 
             var key=[{name:"air",color:"green",strength:0,cost:0,type:0,Icolor:"none",push:false,blast:1,buy:false,img:document.getElementById("air"),rotate:false},//0
@@ -421,11 +421,8 @@
                 }
                 run(isRain,time,src,lowHealth){
                     //convert mouse from local to global
-                    function coordinate(event) {
-                var rect = event.target.getBoundingClientRect();
-                curX = event.clientX - rect.left; //x position within the element.
-                curY = event.clientY - rect.top;  //y position within the element.
-            }
+                    game.GlobalCurX=((curX-Canvas.width/2)/25-this.midX/50)+this.x
+                    game.GlobalCurY=((curY-Canvas.height/2)/25-this.midY/50)+this.y
 
                     //clear the screen
                     this.ctx.clearRect(0,0,Canvas.width,Canvas.height)
@@ -1984,8 +1981,9 @@
             var clicked=false
             var Rclicked=false
             function coordinate(event) {
-                curX=event.clientX
-                curY=event.clientY
+                var rect = event.target.getBoundingClientRect();
+                curX = event.clientX - rect.left; //x position within the element.
+                curY = event.clientY - rect.top;  //y position within the element.
             }
             function Click(event){
                 if(event.button==0){
