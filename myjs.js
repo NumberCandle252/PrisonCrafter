@@ -536,7 +536,7 @@ try{
                         this.ctx.font = "50px Courier New";
                         this.ctx.fillText("Prison_Crafter", Canvas.width/2, 100);
                         this.ctx.font = "25px Courier New";
-                        this.ctx.fillText("Created By Brent Gronfur", Canvas.width/2, 180);
+                        this.ctx.fillText("Created By NumberCandle252", Canvas.width/2, 180);
                         if(this.activeButton(Canvas.width/2, 280,150,50,"black","Craft","white")){
                             game.ui=-2
                         }
