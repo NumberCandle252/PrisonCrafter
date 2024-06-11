@@ -1141,7 +1141,7 @@ try{
                             }
                             if(key[this.world.world[x][y][0]].type==8){//megaban
                                 if(this.world.world[x][y][2]>0){
-                                    this.world.world[x][y][0]=16
+                                    this.world.world[x][y][0]=18
                                     this.src.push([x,y,5])
                                     if(dist(x,y,this.player.x+0.5,this.player.y+0.5)<20){
                                         if(this.banstop<0){
@@ -1150,7 +1150,7 @@ try{
                                         }
                                     }
                                 }else{
-                                    this.world.world[x][y][0]=17
+                                    this.world.world[x][y][0]=19
                                 }
                             }
                             if(key[this.world.world[x][y][0]].type==9){//piston
