@@ -834,7 +834,7 @@ try{
                     this.timer=0
                     this.mission=0
                 }
-                run(){
+                run(last){
                     //this.generateNavMeshToPlayer()
                     //this.time+=1
                     this.cam.run(false,this.time,this.src,false)
@@ -862,8 +862,8 @@ try{
                                 this.changeWorldEdit()
                             }
                         }else{
-                            if(!this.edit){
-                                this.timer+=0.01
+                            if(!this.edit&&dist(last,0,Date.now(),0)<500){
+                                this.timer+=Date.now()-last
                             }
                         }
                         this.player.run()
@@ -1956,9 +1956,11 @@ try{
             }
             var game=new Game()
             var issafe=false
+            var lastTime=0
             function Run(){
                 try{
-                    game.run()
+                    game.run(lastTime)
+                    lastTime=Date.now()
                 }catch(er){
                     if(!issafe){
                         if(confirm("A Fatal Error Has Occured\n"+er+"\nAttempt To Save Prison Before Refreash?")){
