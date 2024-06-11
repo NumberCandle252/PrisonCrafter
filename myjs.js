@@ -2065,7 +2065,7 @@ try{
                 }
             });
 
-            let Inter = setInterval(Run, 1)
+            let Inter = setInterval(Run, 10)
         }catch(e){
             alert("Start Error: "+e)
         }
