@@ -651,7 +651,7 @@ try{
                         this.ctx.font = "55px Courier New";
                         this.ctx.fillText("Escaped", Canvas.width/2, 100);
                         this.ctx.font = "25px Courier New";
-                        this.ctx.fillText("Time: "+Math.round(game.timer*100)/100, Canvas.width/2, 150);
+                        this.ctx.fillText("Time: "+Math.round(game.timer/100)/10, Canvas.width/2, 150);
                         if(this.activeButton(Canvas.width/2-75, 250,140,50,"#000000","Replay","white")){
                             game.ui=0
                             game.player.x=game.startX-0.5
@@ -732,7 +732,7 @@ try{
                         this.ctx.textBaseline = "middle";
                         this.ctx.fillText(["Fist","Heal","Pearl","Pickaxe","Star Charge","Dirt","Power"][NotEditSel],50,25)
                         this.ctx.textAlign = "left";
-                        this.ctx.fillText("Time: "+Math.round(game.timer*100)/100,10,Canvas.height-15)
+                        this.ctx.fillText("Time: "+Math.round(game.timer/100)/10,10,Canvas.height-15)
                         this.ctx.textAlign = "right";
                         this.ctx.fillText(["Get Captured","Break Into The Cell","Reach World Spawn"][game.mission],Canvas.width-10,Canvas.height-15)
                     }
