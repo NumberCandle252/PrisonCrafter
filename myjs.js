@@ -19,8 +19,8 @@ try{
             {name:"inverter-on",color:"grey",strength:10,cost:10,type:6,Icolor:"red",push:true,blast:1,buy:false,img:document.getElementById("inv-on"),rotate:true},//15
             {name:"miniBan",color:"red",strength:50,cost:500,type:7,Icolor:"none",push:true,blast:1,buy:true,img:document.getElementById("miniban"),rotate:false},//16
             {name:"miniBan-off",color:"#690000",strength:50,cost:500,type:7,Icolor:"none",push:true,blast:1,buy:false,img:document.getElementById("minibanoff"),rotate:false},//17
-            {name:"end",color:"#ff1212",strength:25,cost:1500,type:8,Icolor:"none",push:true,blast:1,buy:true,img:document.getElementById("end"),rotate:false},//18
-            {name:"end-off",color:"#4d0d0d",strength:25,cost:1500,type:8,Icolor:"none",push:true,blast:1,buy:false,img:document.getElementById("end-off"),rotate:false},//19
+            {name:"megaban",color:"#ff1212",strength:25,cost:1500,type:8,Icolor:"none",push:true,blast:1,buy:true,img:document.getElementById("end"),rotate:false},//18
+            {name:"megaban-off",color:"#4d0d0d",strength:25,cost:1500,type:8,Icolor:"none",push:true,blast:1,buy:false,img:document.getElementById("end-off"),rotate:false},//19
             {name:"stone gen",color:"#9c9c9c",strength:25,cost:100,type:10,Icolor:"#00eaff",push:true,blast:1,buy:true,img:document.getElementById("stonegen"),rotate:true},//20
             {name:"deepstone gen",color:"#363636",strength:150,cost:2000,type:10,Icolor:"#00eaff",push:true,blast:1,buy:true,img:document.getElementById("deepgen"),rotate:true},//21
             {name:"spikes",color:"#635a58",strength:10,cost:10,type:11,Icolor:"none",push:true,blast:0.8,buy:true,img:document.getElementById("spikes"),rotate:false},//22
@@ -1139,15 +1139,18 @@ try{
                                     this.world.world[x][y][0]=17
                                 }
                             }
-                            if(key[this.world.world[x][y][0]].type==8){//end
+                            if(key[this.world.world[x][y][0]].type==8){//megaban
                                 if(this.world.world[x][y][2]>0){
-                                    this.world.world[x][y][0]=18
-                                    if(this.banstop<0){
-                                        this.ui=3
-                                        this.changeWorldEdit()
+                                    this.world.world[x][y][0]=16
+                                    this.src.push([x,y,5])
+                                    if(dist(x,y,this.player.x+0.5,this.player.y+0.5)<20){
+                                        if(this.banstop<0){
+                                            this.ui=3
+                                            this.changeWorldEdit()
+                                        }
                                     }
                                 }else{
-                                    this.world.world[x][y][0]=19
+                                    this.world.world[x][y][0]=17
                                 }
                             }
                             if(key[this.world.world[x][y][0]].type==9){//piston
